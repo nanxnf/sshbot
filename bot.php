@@ -90,7 +90,7 @@ switch ($tlg->Text ()){
 
 		exec ('./gerarusuario.sh '.$usuario.' '.$senha.' 1 1');
 
-		$textoSSH="🇧🇷 Cuenta SSH creada!\r\n\r\n<b>Servidor:</b> <code>".$ip."</code>\r\n<b>Usuario:</b> <code>".$usuario."</code>\r\n<b>Contraseña:</b> <code>".$senha."</code>\r\n<b>Limite:</b> 1\r\n<b>Expira:</b> ".date ('d/m', strtotime('+1 day'))."\r\n\r\nSSH: 22| Dropbear: 443, 80| Socks: 8080\r\n SSL: 444| Proxy Publico: 442| OpenVPN: 1701\r\n\r\n NO abusar, solo 1 por dia. By; @Nanx_NF";
+		$textoSSH="🇧🇷 Cuenta SSH creada!\r\n\r\n<b>Servidor:</b> <code>".$ip."</code>\r\n<b>Usuario:</b> <code>".$usuario."</code>\r\n<b>Contraseña:</b> <code>".$senha."</code>\r\n<b>Limite:</b> 1\r\n<b>Expira:</b> ".date ('d/m', strtotime('+1 day'))."\r\n\r\nSSH: 22| Dropbear: 443, 80| Socks: 8080\r\nSSL: 444| Proxy Publico: 442| OpenVPN: 1701\r\n\r\n NO abusar, solo 1 por dia. By; @Nanx_NF";
 
 		$redis->setex ($tlg->UserID (), 43200, 'true'); //define registro para ser guardado por 12h
 
